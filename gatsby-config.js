@@ -12,6 +12,13 @@ module.exports = {
     description:"A first blog in GatsbyJS",
   },
   plugins: [
+    {
+      resolve:'gatsby-source-contentful',
+      options:{
+        spaceId:process.env.SPACE_ID,
+        accessToken:process.env.CONTENTFUL_ACCESS_TOKEN
+      }
+    },
     'gatsby-plugin-sass',
     {
       resolve:'gatsby-source-filesystem',
